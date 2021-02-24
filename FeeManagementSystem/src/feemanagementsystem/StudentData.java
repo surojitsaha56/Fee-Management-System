@@ -41,7 +41,7 @@ public class StudentData extends JFrame implements ActionListener
             conn con =  new conn();
             String sql = "select student_id, name, mobile_number, address, "
                     + "institution, doa, java, python, ds, aoa from "
-                    + "student_details where student_id= ? or mobile_number= ?";
+                    + "student_details where student_id= ? or mobile_number= ? limit 1";
             PreparedStatement st = con.c.prepareStatement(sql);
             st.setString(1, S1);
             st.setString(2, S2);

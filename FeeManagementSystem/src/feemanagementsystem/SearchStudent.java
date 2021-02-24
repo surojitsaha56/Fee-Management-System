@@ -71,7 +71,7 @@ public class SearchStudent extends JFrame implements ActionListener
             {
                 conn con=new conn();
                 String sql = "select * from student_details where "
-                        + "student_id = ? or mobile_number =?";
+                        + "student_id = ? or mobile_number =? limit 1";
                     PreparedStatement ps = con.c.prepareStatement(sql);
                     ps.setString(1, tf1.getText());
                     ps.setString(2, tf2.getText());
